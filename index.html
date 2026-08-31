@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Three Pilchards · Polperro</title>
+  <meta name="description" content="Dan and Kat welcome you to the oldest pub in Polperro. 16th-century Grade 2 listed on Quay Road. Open daily from 11am; food noon–8pm. Call 01503 272233.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dusk: #1c2744;
+      --dusk-deep: #12192c;
+      --dusk-mid: #2a3a5c;
+      --copper: #c45e38;
+      --copper-soft: #e07a52;
+      --copper-deep: #9a3e24;
+      --linen: #f4efe6;
+      --linen-deep: #e6dccb;
+      --silver: #9bb0b8;
+      --ink: #1a1d22;
+      --muted: #545a62;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      font-family: Outfit, "Segoe UI", sans-serif;
+      font-size: 1.0625rem; line-height: 1.58;
+      color: var(--ink); background: var(--linen); padding-bottom: 4.6rem;
+    }
+    a { color: var(--copper-deep); text-underline-offset: 0.16em; }
+    a:hover { color: var(--dusk); }
+    :focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; }
+    .wrap { width: min(40rem, calc(100% - 1.5rem)); margin-inline: auto; }
+    .eyebrow {
+      font-family: Outfit, sans-serif; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper);
+    }
+    .skip {
+      position: absolute; left: 0.75rem; top: -3.2rem;
+      background: var(--copper); color: var(--linen);
+      padding: 0.45rem 0.75rem; font-weight: 700; z-index: 30; text-decoration: none;
+    }
+    .skip:focus { top: 0.75rem; }
+    header.site {
+      position: sticky; top: 0; z-index: 10; color: var(--linen);
+      background: var(--dusk-deep); border-bottom: 3px solid var(--copper);
+    }
+    .nav {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 0.45rem 0.9rem; min-height: 3.2rem;
+      width: min(54rem, calc(100% - 1.5rem)); margin-inline: auto; padding: 0.4rem 0;
+    }
+    .nav-mark {
+      display: flex; align-items: center; gap: 0.55rem;
+      font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 0.98rem;
+      color: var(--linen); text-decoration: none; line-height: 1.15;
+    }
+    .nav-mark svg { flex-shrink: 0; }
+    .nav-mark span {
+      display: block; font-family: Outfit, sans-serif; font-size: 0.62rem;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver); font-weight: 500;
+    }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 0.1rem; list-style: none; }
+    .nav-links a {
+      color: var(--linen); text-decoration: none; font-size: 0.84rem; font-weight: 500;
+      min-height: 2.5rem; display: inline-flex; align-items: center; padding: 0.25rem 0.5rem;
+    }
+    .nav-links a.call {
+      background: var(--copper); color: var(--linen); font-weight: 700; padding: 0.35rem 0.8rem;
+    }
+    .hero {
+      background:
+        radial-gradient(circle at 12% 88%, rgba(196,94,56,0.22), transparent 32%),
+        radial-gradient(circle at 92% 8%, rgba(155,176,184,0.18), transparent 28%),
+        linear-gradient(180deg, var(--dusk) 0%, var(--dusk-deep) 100%);
+      color: var(--linen); padding: 2.4rem 0 2.6rem;
+    }
+    .stamp {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-weight: 600; letter-spacing: 0.16em; font-size: 0.7rem; text-transform: uppercase;
+      border: 1px solid var(--copper); color: var(--copper-soft);
+      padding: 0.28rem 0.6rem; margin-bottom: 0.9rem;
+    }
+    .hero h1 {
+      font-family: Newsreader, Georgia, serif; font-weight: 600;
+      font-size: clamp(2rem, 8.5vw, 3.15rem); line-height: 1.04;
+    }
+    .hero .line { margin-top: 1rem; max-width: 32rem; color: #e4ddd2; }
+    .hero .warn {
+      margin-top: 0.95rem; padding: 0.75rem 0.9rem;
+      border-left: 3px solid var(--copper); background: rgba(0,0,0,0.28);
+      font-size: 0.98rem;
+    }
+    .hero address { margin-top: 0.9rem; font-style: normal; color: var(--silver); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.35rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 2.85rem; padding: 0.55rem 1.15rem; text-decoration: none;
+      font-weight: 600; font-size: 0.92rem;
+    }
+    .btn-solid { background: var(--copper); color: var(--linen); }
+    .btn-solid:hover { background: var(--copper-soft); color: var(--dusk-deep); }
+    .btn-ghost { background: transparent; color: var(--linen); box-shadow: inset 0 0 0 2px rgba(244,239,230,0.45); }
+    .btn-ink { background: var(--dusk); color: var(--linen); }
+    .btn-ink:hover { color: var(--linen); }
+    .btn-line { background: transparent; color: var(--dusk); box-shadow: inset 0 0 0 2px var(--dusk); }
+    section { padding: 2.55rem 0; }
+    section h2 {
+      font-family: Newsreader, Georgia, serif; font-weight: 600;
+      font-size: clamp(1.5rem, 5.4vw, 2.05rem); line-height: 1.15;
+      color: var(--dusk); margin: 0.35rem 0 0.95rem;
+    }
+    .house p { margin-bottom: 0.9rem; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.05rem; }
+    .chip {
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em;
+      background: var(--linen-deep); color: var(--dusk);
+      padding: 0.4rem 0.7rem;
+    }
+    .hours { background: var(--dusk-deep); color: var(--linen); }
+    .hours h2 { color: var(--linen); }
+    .hours .eyebrow { color: var(--copper-soft); }
+    .hours .lede { color: var(--silver); margin-bottom: 1rem; }
+    .tide-table { width: 100%; border-collapse: collapse; font-size: 0.98rem; }
+    .tide-table th, .tide-table td {
+      text-align: left; padding: 0.65rem 0.45rem;
+      border-bottom: 1px solid rgba(244,239,230,0.14); vertical-align: top;
+    }
+    .tide-table thead th {
+      font-size: 0.68rem; letter-spacing: 0.14em; font-weight: 600;
+      text-transform: uppercase; color: var(--copper-soft); border-bottom: 2px solid var(--copper);
+    }
+    .note {
+      margin-top: 1.1rem; padding: 0.85rem 1rem;
+      border-left: 3px solid var(--copper); background: rgba(28,39,68,0.55);
+    }
+    .hours .note { background: rgba(196,94,56,0.16); }
+    .garden { background: var(--linen-deep); }
+    .steps {
+      display: grid; gap: 0.7rem; margin: 1.15rem 0 1.2rem;
+    }
+    @media (min-width: 520px) { .steps { grid-template-columns: 1fr 1fr; } }
+    .step {
+      background: var(--linen); padding: 1rem 1.05rem;
+      border-top: 3px solid var(--copper);
+    }
+    .step b {
+      display: block; font-family: Newsreader, Georgia, serif;
+      font-size: clamp(2rem, 8vw, 2.6rem); line-height: 1; color: var(--dusk);
+    }
+    .step span { display: block; margin-top: 0.25rem; color: var(--muted); font-size: 0.95rem; }
+    .facts { display: grid; gap: 0.7rem; margin-top: 1.2rem; }
+    @media (min-width: 560px) { .facts { grid-template-columns: 1fr 1fr; } }
+    .fact { background: var(--linen); padding: 0.9rem 1rem; }
+    .garden .fact { background: var(--linen); }
+    .house .fact { background: var(--linen-deep); }
+    .fact h3 {
+      font-family: Newsreader, Georgia, serif; font-size: 1.05rem;
+      color: var(--dusk); margin-bottom: 0.25rem;
+    }
+    .fact p { color: var(--muted); font-size: 0.98rem; }
+    .visit {
+      background: linear-gradient(180deg, var(--dusk) 0%, var(--dusk-deep) 100%);
+      color: var(--linen);
+    }
+    .visit h2 { color: var(--linen); }
+    .visit .eyebrow { color: var(--copper-soft); }
+    .visit a { color: var(--copper-soft); }
+    .visit address {
+      font-family: Newsreader, Georgia, serif; font-style: normal;
+      font-size: 1.18rem; line-height: 1.45; margin: 0.15rem 0 1.15rem;
+    }
+    .visit dl { display: grid; gap: 0.85rem; }
+    .visit dt {
+      font-size: 0.68rem; letter-spacing: 0.14em; font-weight: 600;
+      text-transform: uppercase; color: var(--copper-soft);
+    }
+    footer.site { background: var(--dusk-deep); color: var(--linen-deep); padding: 1.6rem 0 1.8rem; }
+    footer .shop { font-family: Newsreader, Georgia, serif; font-size: 1.12rem; color: var(--linen); }
+    footer .legal { margin-top: 0.25rem; font-size: 0.88rem; color: var(--silver); }
+    footer .around { margin-top: 0.95rem; }
+    footer .around p {
+      font-size: 0.68rem; letter-spacing: 0.16em; font-weight: 600;
+      text-transform: uppercase; color: var(--copper-soft); margin-bottom: 0.4rem;
+    }
+    footer .around ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem 0.85rem; }
+    footer .around a { color: var(--linen-deep); font-size: 0.92rem; }
+    footer .around a:hover { color: var(--copper-soft); }
+    .dock {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 15;
+      display: grid; grid-template-columns: 1fr 1fr;
+      background: var(--dusk-deep); border-top: 2px solid var(--copper);
+    }
+    .dock a {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 3.1rem; text-decoration: none; font-weight: 700;
+    }
+    .dock .call { background: var(--copper); color: var(--linen); }
+    .dock .mail { color: var(--linen); }
+    @media (min-width: 720px) { body { padding-bottom: 0; } .dock { display: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <nav class="nav" aria-label="Page">
+      <a class="nav-mark" href="#main">
+        <svg width="36" height="18" viewBox="0 0 36 18" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="#e07a52" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 9c2.2-3.4 6-5 9.2-3.2 1.4.8 2.3 2 2.8 3.2-.5 1.2-1.4 2.4-2.8 3.2C8 14 4.2 12.4 2 9z"/>
+            <path d="M13 9c2.2-3.4 6-5 9.2-3.2 1.4.8 2.3 2 2.8 3.2-.5 1.2-1.4 2.4-2.8 3.2C19 14 15.2 12.4 13 9z"/>
+            <path d="M24 9c2.2-3.4 6-5 9.2-3.2 1.4.8 2.3 2 2.8 3.2-.5 1.2-1.4 2.4-2.8 3.2C30 14 26.2 12.4 24 9z"/>
+          </g>
+        </svg>
+        The Three Pilchards<span>Quay Road, Polperro</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#house">The house</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#garden">Garden</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a class="call" href="tel:+441503272233">Call</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="stamp">Oldest pub in Polperro</p>
+        <h1 id="hero-title">The Three Pilchards</h1>
+        <p class="line">Dan and Kat welcome you. A 16th-century Grade 2 listed inn on the harbour, with a rooftop beer garden looking over the village.</p>
+        <p class="warn">We do not take bookings, because of location, seasonality and weather. If the tables are full we take a number and call you — a waiting list, not a reservation.</p>
+        <address>Quay Road, Polperro, Cornwall PL13 2QZ</address>
+        <div class="actions">
+          <a class="btn btn-solid" href="tel:+441503272233">Call 01503 272233</a>
+          <a class="btn btn-ghost" href="mailto:thethreepilchards@hotmail.com">Email the pub</a>
+        </div>
+      </div>
+    </section>
+    <section class="house" id="house">
+      <div class="wrap">
+        <p class="eyebrow">On the quay</p>
+        <h2>Harbour inn, historic setting</h2>
+        <p>The oldest pub in Polperro sits on Quay Road, in a 16th-century Grade 2 listed building. The name comes from the pilchard catch that once made this harbour a busy little port.</p>
+        <p>Everyone is welcome, including dogs. Local ales, ciders and lagers, local spirits and a wide wine list sit behind the bar. Food is fresh and local; staff keep an eye on the room.</p>
+        <div class="chip-row">
+          <span class="chip">Dog friendly</span>
+          <span class="chip">Everyone welcome</span>
+          <span class="chip">Local ales &amp; ciders</span>
+          <span class="chip">Rooftop harbour view</span>
+        </div>
+      </div>
+    </section>
+    <section class="hours" id="hours">
+      <div class="wrap">
+        <p class="eyebrow">All year</p>
+        <h2>Open daily from 11am</h2>
+        <p class="lede">Food all day from noon until 8pm. Example menus live with the pub — this page does not invent a bill of fare.</p>
+        <table class="tide-table">
+          <thead>
+            <tr><th scope="col">When</th><th scope="col">Pub</th><th scope="col">Food</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Daily</th><td>From 11am</td><td>Noon–8pm</td></tr>
+            <tr><th scope="row">Christmas Day</th><td>—</td><td>No food</td></tr>
+            <tr><th scope="row">New Year’s Eve</th><td>—</td><td>Until 7pm</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Walk-in only. Give a number for the waiting list and they will call when a table is ready. Takeaway beer and a stroll, or sit on the Fish Quay opposite while you wait.</p>
+      </div>
+    </section>
+    <section class="garden" id="garden">
+      <div class="wrap">
+        <p class="eyebrow">Rooftop</p>
+        <h2>Harbour-view beer garden</h2>
+        <p>The garden is to the rear of the restaurant: first level up 31 steps, second level another 17. The view is worth it. It is not for wheelchairs, prams or highchairs — elevation, narrowness, space and safety.</p>
+        <div class="steps" aria-hidden="true">
+          <div class="step"><b>31</b><span>steps to the first level</span></div>
+          <div class="step"><b>17</b><span>more to the second</span></div>
+        </div>
+        <div class="facts">
+          <article class="fact">
+            <h3>Weather</h3>
+            <p>Parasols for a shower. Sitting in the garden is at your own risk. If the weather turns they may not be able to seat you inside.</p>
+          </article>
+          <article class="fact">
+            <h3>Highchairs</h3>
+            <p>Highchairs inside the pub and restaurant only — none in the garden.</p>
+          </article>
+          <article class="fact">
+            <h3>Inside</h3>
+            <p>A small 10cm step at the front door. The bar and restaurant are reasonably level. Pushchairs folded, please, so walkways stay clear. Arrangements can be made for wheelchair users who want to eat and drink inside.</p>
+          </article>
+          <article class="fact">
+            <h3>Toilets</h3>
+            <p>To the rear, up 4 steps through the restaurant, or by the back gate on a short slope. No disabled toilet — age of the building. Ladies, urinal and unisex. Public toilets about 50 metres down, 50p, Easter to early November, with baby change.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="visit" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Visit</p>
+        <h2>Quay Road</h2>
+        <address>The Three Pilchards<br>Quay Road<br>Polperro, Cornwall PL13 2QZ</address>
+        <dl>
+          <div><dt>Telephone</dt><dd><a href="tel:+441503272233">01503 272233</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:thethreepilchards@hotmail.com">thethreepilchards@hotmail.com</a></dd></div>
+          <div><dt>Parking</dt><dd>At the top of the village. Privately owned; cash only at this time, with change machines.</dd></div>
+          <div><dt>Map</dt><dd><a href="https://www.openstreetmap.org/search?query=Quay%20Road%20Polperro%20PL13%202QZ">Open in OpenStreetMap</a></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-solid" href="tel:+441503272233">Call 01503 272233</a>
+          <a class="btn btn-ghost" href="mailto:thethreepilchards@hotmail.com">Email the pub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site">
+    <div class="wrap">
+      <p class="shop">The Three Pilchards · Polperro</p>
+      <p class="legal">Trading as TJ and MS Courtis Ltd.</p>
+      <nav class="around" aria-label="Other shops">
+        <p>Also around</p>
+        <ul>
+          <li><a href="https://suifei.github.io/lezzet-scarborough-demo/">Lezzet, Scarborough</a></li>
+          <li><a href="https://suifei.github.io/salcombe-deli-demo/">The Salcombe Delicatessen</a></li>
+          <li><a href="https://suifei.github.io/wardroom-salcombe-demo/">The Wardroom, Salcombe</a></li>
+          <li><a href="https://suifei.github.io/harbour-inn-padstow-demo/">The Harbour Inn, Padstow</a></li>
+          <li><a href="https://suifei.github.io/london-inn-padstow-demo/">The London Inn, Padstow</a></li>
+          <li><a href="https://suifei.github.io/king-of-prussia-fowey-demo/">The King of Prussia, Fowey</a></li>
+          <li><a href="https://suifei.github.io/fish-market-looe-demo/">The Fish Market, Looe</a></li>
+          <li><a href="https://suifei.github.io/fifty-looe-demo/">Fifty Looe</a></li>
+          <li><a href="https://suifei.github.io/pepes-texmex-looe-demo/">Pepe's Tex-Mex, Looe</a></li>
+          <li><a href="https://suifei.github.io/jolly-sailor-looe-demo/">The Jolly Sailor, Looe</a></li>
+          <li><a href="https://suifei.github.io/house-on-the-props-polperro-demo/">House on the Props, Polperro</a></li>
+          <li><a href="https://suifei.github.io/ship-inn-polperro-demo/">The Ship Inn, Polperro</a></li>
+          <li><a href="https://suifei.github.io/oxox-polperro-demo/">O X O X, Polperro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <nav class="dock" aria-label="Call or email">
+    <a class="call" href="tel:+441503272233">Call</a>
+    <a class="mail" href="mailto:thethreepilchards@hotmail.com">Email</a>
+  </nav>
+</body>
+</html>
